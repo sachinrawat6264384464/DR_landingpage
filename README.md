@@ -23,9 +23,10 @@ A state-of-the-art, premium academic portfolio and research group website engine
 - **Horizontal Stats Strip**: 20+ Years Exp | 75+ Publications | 15+ PhD Scholars | 25+ Awards | 10+ Collaborations.
 - **Dual Education & Experience Timelines**.
 
-### 🔬 3. Primary Research Areas
+### 🔬 3. Primary Research Areas & Live Interactive Simulator
 - 6 interactive research domain cards with spring hover animations (`whileHover={{ y: -8, scale: 1.02 }}`).
 - **Interactive Detail Modal**: Powered by Framer Motion `AnimatePresence` with backdrop blur, active project counts, and grant details.
+- **💡 Live Interactive AI-Quantum Simulator Sandbox**: Live browser-based hyperparameter tuning (Learning rate, Qubit count sliders) with real-time accuracy, latency, and energy reduction metrics.
 
 ### 💻 4. Research Lab & Sponsored Grants (AI-QIS Lab)
 - **AI & Quantum Intelligence Systems Lab** banner with total funding ($3.4M+), team size, and director credits.
@@ -39,17 +40,25 @@ A state-of-the-art, premium academic portfolio and research group website engine
 - **Toolbar**: Real-time search bar, category tabs (*All, Journal, Conference, Book Chapter*), and publication year selector (*All Years, 2024, 2023, 2022, 2021*).
 - **Paper Cards**: Category pills, citation count gold badges, author highlights, DOI links, one-click citation copy button, and collapsible abstract drawers.
 
-### 📅 6. Career Journey (Full-Width 2-Column Layout)
+### 🎥 6. Open Courseware & Featured Video Lectures
+- Interactive video recording cards for core university courses (*CS-501 Advanced Deep Learning*, *CS-704 Quantum Computing*, *CS-412 Trustworthy AI*).
+- Duration badges, viewer metrics, student rating (`⭐ 4.9/5.0`), and one-click `[📥 Download Lecture Slides (PDF)]` action buttons.
+
+### 📰 7. News, Media Features & Keynote Talks
+- Media coverage in *MIT Technology Review*, *Times Higher Education*, and *IEEE Spectrum*.
+- Plenary keynote speeches at *IJCAI 2024 (Tokyo)* and panel chairing at *Stanford Quantum Summit (Palo Alto)*.
+
+### 📅 8. Career Journey (Full-Width 2-Column Layout)
 - **Left Column**: Interactive vertical milestone track with role-type filter tabs (*All, Leadership, Teaching, Research*).
 - **Right Column**: Sticky **Official Academic Dossier & CV Download Card**, Career Metrics Snapshot, and Professional Affiliations (*IEEE Senior Member, ACM Distinguished Speaker, INSA Fellow*).
 
-### 🏆 7. Honors, Awards & Fellowships
+### 🏆 9. Honors, Awards & Fellowships
 - Showcase of global academic recognitions, best paper awards, and university fellowships with gold emblem badges.
 
-### 👥 8. Students Guidance & Advisory
-- Ph.D. scholars and Master's thesis researchers showcase with current placements at *Google DeepMind*, *MIT CSAIL*, *IIT Bombay*, etc.
+### 💬 10. Alumni Mentorship & Peer Endorsements
+- Verified testimonials from former Ph.D. scholars now holding senior faculty & research roles at *Google DeepMind*, *MIT CSAIL*, *IIT Bombay*, and *Microsoft Research*.
 
-### ✉️ 9. Academic Desk & Contact
+### ✉️ 11. Academic Desk & Contact
 - Complete office coordinates, advising hours, and interactive academic inquiry form.
 
 ---
@@ -83,41 +92,6 @@ npm install
 npm run dev
 ```
 Open **[http://localhost:3000](http://localhost:3000)** in your browser.
-
----
-
-## 📁 Directory Structure
-
-```text
-d:\landing page\
-├── public/
-│   └── images/
-│       └── professor_portrait.png
-├── src/
-│   ├── app/
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── HeroSection.tsx
-│   │   ├── AboutSection.tsx
-│   │   ├── ResearchSection.tsx
-│   │   ├── LabGrantsSection.tsx
-│   │   ├── PublicationsSection.tsx
-│   │   ├── TeachingSection.tsx
-│   │   ├── TimelineSection.tsx
-│   │   ├── AchievementsSection.tsx
-│   │   ├── GuidanceSection.tsx
-│   │   ├── ContactSection.tsx
-│   │   └── Footer.tsx
-│   └── data/
-│       └── professorData.ts
-├── tailwind.config.ts
-├── tsconfig.json
-├── package.json
-└── README.md
-```
 
 ---
 
