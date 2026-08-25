@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import ThreeDTiltCard from "@/components/ThreeDTiltCard";
 import {
   Play,
   Video,
@@ -12,8 +13,6 @@ import {
   Sparkles,
   MapPin,
   Calendar,
-  Users,
-  Award,
 } from "lucide-react";
 
 export default function MediaGallerySection() {
@@ -80,98 +79,98 @@ export default function MediaGallerySection() {
         {/* 2-Column Layout: Left Video Player | Right Photo Gallery */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
-          {/* Left Column: Featured Video Spotlight (6 Cols) */}
+          {/* Left Column: Featured Video Spotlight (6 Cols) with 3D Tilt */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/90 shadow-md flex flex-col justify-between space-y-6"
+            className="lg:col-span-6"
           >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase bg-red-50 text-red-700 border border-red-200 px-3 py-1 rounded-full">
-                  <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-                  Keynote Video Spotlight
-                </span>
+            <ThreeDTiltCard maxTilt={8} className="h-full">
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/90 shadow-md flex flex-col justify-between space-y-6 h-full">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase bg-red-50 text-red-700 border border-red-200 px-3 py-1 rounded-full">
+                      <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
+                      Keynote Video Spotlight
+                    </span>
 
-                <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                  July 2024
-                </span>
-              </div>
+                    <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                      July 2024
+                    </span>
+                  </div>
 
-              {/* Video Player Card Container */}
-              <div className="relative aspect-video rounded-2xl bg-slate-950 overflow-hidden border border-slate-800 shadow-xl group">
-                {/* Background Image / Poster */}
-                <Image
-                  src="/images/keynote_speech.png"
-                  alt="IJCAI Keynote Speech Video Poster"
-                  fill
-                  className={`object-cover object-center transition-transform duration-700 group-hover:scale-105 ${
-                    isVideoPlaying ? "opacity-30 blur-sm" : "opacity-90"
-                  }`}
-                />
+                  {/* Video Player Card Container */}
+                  <div className="relative aspect-video rounded-2xl bg-slate-950 overflow-hidden border border-slate-800 shadow-xl group">
+                    <Image
+                      src="/images/keynote_speech.png"
+                      alt="IJCAI Keynote Speech Video Poster"
+                      fill
+                      className={`object-cover object-center transition-transform duration-700 group-hover:scale-105 ${
+                        isVideoPlaying ? "opacity-30 blur-sm" : "opacity-90"
+                      }`}
+                    />
 
-                {/* Overlay Ambient Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent" />
 
-                {/* Center Animated Play Button */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center space-y-3 z-10">
-                  <motion.button
-                    whileHover={{ scale: 1.15 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={() => setIsVideoPlaying(!isVideoPlaying)}
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-academic-gold text-academic-navy flex items-center justify-center shadow-2xl hover:bg-white transition-all cursor-pointer border-4 border-white/20"
+                    <div className="absolute inset-0 flex flex-col items-center justify-center space-y-3 z-10">
+                      <motion.button
+                        whileHover={{ scale: 1.15 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => setIsVideoPlaying(!isVideoPlaying)}
+                        className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-academic-gold text-academic-navy flex items-center justify-center shadow-2xl hover:bg-white transition-all cursor-pointer border-4 border-white/20"
+                      >
+                        <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-academic-navy ml-1" />
+                      </motion.button>
+                      
+                      <span className="text-xs font-bold text-white bg-black/60 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/20">
+                        {isVideoPlaying ? "Click to Pause" : "Click to Play Keynote (45 mins)"}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-slate-200 z-10">
+                      <span className="bg-black/70 px-2.5 py-1 rounded-md border border-white/10 flex items-center gap-1">
+                        <Video className="w-3.5 h-3.5 text-academic-gold" />
+                        IJCAI 2024 Tokyo Plenary
+                      </span>
+
+                      <span className="bg-blue-600/80 px-2.5 py-1 rounded-md font-bold text-white">
+                        28.4K Views
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Video Title & Details */}
+                  <div className="space-y-2">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-academic-navy leading-snug">
+                      Opening Plenary Address: "Quantum Machine Learning & Neural Primitives"
+                    </h3>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                      Delivered live at IJCAI Tokyo Japan to an audience of over 2,500 computer scientists, exploring variational quantum circuits for deep transformer optimization.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+                  <span className="flex items-center gap-1.5 text-academic-blue">
+                    <MapPin className="w-3.5 h-3.5 text-academic-blue" />
+                    Tokyo International Forum, Japan
+                  </span>
+
+                  <button
+                    onClick={() => alert("Opening full lecture recording and slides...")}
+                    className="text-academic-navy hover:text-academic-blue underline"
                   >
-                    <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-academic-navy ml-1" />
-                  </motion.button>
-                  
-                  <span className="text-xs font-bold text-white bg-black/60 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/20">
-                    {isVideoPlaying ? "Click to Pause" : "Click to Play Keynote (45 mins)"}
-                  </span>
-                </div>
-
-                {/* Bottom Video Meta Overlay */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-slate-200 z-10">
-                  <span className="bg-black/70 px-2.5 py-1 rounded-md border border-white/10 flex items-center gap-1">
-                    <Video className="w-3.5 h-3.5 text-academic-gold" />
-                    IJCAI 2024 Tokyo Plenary
-                  </span>
-
-                  <span className="bg-blue-600/80 px-2.5 py-1 rounded-md font-bold text-white">
-                    28.4K Views
-                  </span>
+                    View Full Presentation Slides (PDF)
+                  </button>
                 </div>
               </div>
-
-              {/* Video Title & Details */}
-              <div className="space-y-2">
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-academic-navy leading-snug">
-                  Opening Plenary Address: "Quantum Machine Learning & Neural Primitives"
-                </h3>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Delivered live at IJCAI Tokyo Japan to an audience of over 2,500 computer scientists, exploring variational quantum circuits for deep transformer optimization.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
-              <span className="flex items-center gap-1.5 text-academic-blue">
-                <MapPin className="w-3.5 h-3.5 text-academic-blue" />
-                Tokyo International Forum, Japan
-              </span>
-
-              <button
-                onClick={() => alert("Opening full lecture recording and slides...")}
-                className="text-academic-navy hover:text-academic-blue underline"
-              >
-                View Full Presentation Slides (PDF)
-              </button>
-            </div>
+            </ThreeDTiltCard>
           </motion.div>
 
-          {/* Right Column: Academic Photo Gallery Cards (6 Cols) */}
+          {/* Right Column: Academic Photo Gallery Cards (6 Cols) with 3D Tilt */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -191,40 +190,38 @@ export default function MediaGallerySection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
               {galleryItems.map((item) => (
-                <motion.div
-                  key={item.id}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setSelectedPhoto(item)}
-                  className="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all cursor-pointer group flex items-center gap-4"
-                >
-                  {/* Photo Thumbnail Container */}
-                  <div className="relative w-28 sm:w-32 h-20 sm:h-24 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-200">
-                    <Image
-                      src={item.src}
-                      alt={item.title}
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
-                    <div className="absolute top-1.5 right-1.5 p-1 bg-black/60 text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Maximize2 className="w-3 h-3" />
-                    </div>
-                  </div>
+                <div key={item.id} onClick={() => setSelectedPhoto(item)}>
+                  <ThreeDTiltCard maxTilt={8}>
+                    <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all cursor-pointer group flex items-center gap-4">
+                      {/* Photo Thumbnail Container */}
+                      <div className="relative w-28 sm:w-32 h-20 sm:h-24 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-200">
+                        <Image
+                          src={item.src}
+                          alt={item.title}
+                          fill
+                          className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors" />
+                        <div className="absolute top-1.5 right-1.5 p-1 bg-black/60 text-white rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                          <Maximize2 className="w-3 h-3" />
+                        </div>
+                      </div>
 
-                  {/* Caption & Location */}
-                  <div className="space-y-1 pr-2">
-                    <span className="text-[10px] font-extrabold uppercase text-academic-blue bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
-                      {item.category}
-                    </span>
-                    <h4 className="font-serif text-sm sm:text-base font-bold text-academic-navy group-hover:text-academic-blue transition-colors line-clamp-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-slate-500 text-xs line-clamp-1 font-medium">
-                      📍 {item.location} • {item.caption}
-                    </p>
-                  </div>
-                </motion.div>
+                      {/* Caption & Location */}
+                      <div className="space-y-1 pr-2">
+                        <span className="text-[10px] font-extrabold uppercase text-academic-blue bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
+                          {item.category}
+                        </span>
+                        <h4 className="font-serif text-sm sm:text-base font-bold text-academic-navy group-hover:text-academic-blue transition-colors line-clamp-1">
+                          {item.title}
+                        </h4>
+                        <p className="text-slate-500 text-xs line-clamp-1 font-medium">
+                          📍 {item.location} • {item.caption}
+                        </p>
+                      </div>
+                    </div>
+                  </ThreeDTiltCard>
+                </div>
               ))}
             </div>
 

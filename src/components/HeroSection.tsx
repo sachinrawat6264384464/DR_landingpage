@@ -4,7 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { professorData } from "@/data/professorData";
-import { BookOpen, User, Star, ArrowRight } from "lucide-react";
+import { BookOpen, User, Star, ArrowRight, Award } from "lucide-react";
+import ThreeDTiltCard from "@/components/ThreeDTiltCard";
 
 export default function HeroSection() {
   const containerVariants = {
@@ -115,28 +116,41 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Professor Photo Container with Gentle Floating Effect */}
+          {/* Right Column - 3D Tilt Professor Photo Container */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-blue-50/80 to-slate-100 p-2 border border-slate-200/80 shadow-2xl"
-            >
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-200">
-                <Image
-                  src="/images/professor_portrait.png"
-                  alt={professorData.name}
-                  fill
-                  priority
-                  className="object-cover object-top transition-transform duration-700 hover:scale-105"
-                />
+            <ThreeDTiltCard maxTilt={15} className="w-full max-w-md">
+              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-b from-blue-50/80 to-slate-100 p-2 border border-slate-200/80 shadow-2xl">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-200">
+                  <Image
+                    src="/images/professor_portrait.png"
+                    alt={professorData.name}
+                    fill
+                    priority
+                    className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+
+                {/* 3D Floating Badge Floating on Top */}
+                <motion.div
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-white/40 shadow-xl flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-academic-navy text-academic-gold flex items-center justify-center shrink-0">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-academic-navy">Top 2% Stanford Scientist</div>
+                    <div className="text-[11px] text-slate-500 font-medium">Artificial Intelligence & Quantum Computing</div>
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
+            </ThreeDTiltCard>
           </motion.div>
 
         </div>

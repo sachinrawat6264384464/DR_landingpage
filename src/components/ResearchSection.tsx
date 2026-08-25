@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { professorData, ResearchArea } from "@/data/professorData";
+import ThreeDTiltCard from "@/components/ThreeDTiltCard";
 import {
   BrainCircuit,
   Cpu,
@@ -60,7 +61,7 @@ export default function ResearchSection() {
           </p>
         </motion.div>
 
-        {/* 6 Research Cards Grid with Spring Hover Animation */}
+        {/* 6 Research Cards Grid with 3D Tilt Effect */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {professorData.researchAreas.map((area, index) => (
             <motion.div
@@ -69,57 +70,59 @@ export default function ResearchSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
               onClick={() => setSelectedResearch(area)}
-              className="academic-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between cursor-pointer group relative overflow-hidden"
+              className="h-full"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center border border-blue-100 group-hover:bg-academic-navy group-hover:border-academic-navy transition-all duration-300">
-                    <span className="group-hover:brightness-200 transition-all">
-                      {getResearchIcon(area.iconName)}
+              <ThreeDTiltCard maxTilt={10} className="h-full">
+                <div className="academic-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between cursor-pointer group relative overflow-hidden h-full">
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center border border-blue-100 group-hover:bg-academic-navy group-hover:border-academic-navy transition-all duration-300">
+                        <span className="group-hover:brightness-200 transition-all">
+                          {getResearchIcon(area.iconName)}
+                        </span>
+                      </div>
+                      <motion.span
+                        whileHover={{ x: 3, y: -3 }}
+                        className="text-slate-400 group-hover:text-academic-blue transition-colors"
+                      >
+                        <ArrowUpRight className="w-5 h-5" />
+                      </motion.span>
+                    </div>
+
+                    <h3 className="font-serif text-xl font-bold text-academic-navy group-hover:text-academic-blue transition-colors">
+                      {area.title}
+                    </h3>
+
+                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
+                      {area.description}
+                    </p>
+
+                    {/* Key Topics Badges */}
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {area.keyTopics.slice(0, 3).map((topic, i) => (
+                        <span
+                          key={i}
+                          className="text-[11px] font-medium bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Bottom Meta Stats */}
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500">
+                    <span className="flex items-center gap-1">
+                      <FolderGit2 className="w-3.5 h-3.5 text-academic-blue" />
+                      {area.activeProjects} Active Projects
+                    </span>
+                    <span className="text-academic-navy font-bold">
+                      {area.grantTotal} Grants
                     </span>
                   </div>
-                  <motion.span
-                    whileHover={{ x: 3, y: -3 }}
-                    className="text-slate-400 group-hover:text-academic-blue transition-colors"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </motion.span>
                 </div>
-
-                <h3 className="font-serif text-xl font-bold text-academic-navy group-hover:text-academic-blue transition-colors">
-                  {area.title}
-                </h3>
-
-                <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
-                  {area.description}
-                </p>
-
-                {/* Key Topics Badges */}
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {area.keyTopics.slice(0, 3).map((topic, i) => (
-                    <span
-                      key={i}
-                      className="text-[11px] font-medium bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md"
-                    >
-                      {topic}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Bottom Meta Stats */}
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500">
-                <span className="flex items-center gap-1">
-                  <FolderGit2 className="w-3.5 h-3.5 text-academic-blue" />
-                  {area.activeProjects} Active Projects
-                </span>
-                <span className="text-academic-navy font-bold">
-                  {area.grantTotal} Grants
-                </span>
-              </div>
+              </ThreeDTiltCard>
             </motion.div>
           ))}
         </div>

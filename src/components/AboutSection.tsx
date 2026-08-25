@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { professorData } from "@/data/professorData";
+import ThreeDTiltCard from "@/components/ThreeDTiltCard";
 import {
   User,
   Heart,
@@ -97,7 +98,7 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Middle Column: Professor Portrait Image Card */}
+          {/* Middle Column: Professor Portrait 3D Tilt Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,15 +106,17 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-4 flex"
           >
-            <div className="relative w-full rounded-3xl overflow-hidden bg-slate-200 border border-slate-200/80 shadow-xl aspect-[4/5] min-h-[380px]">
-              <Image
-                src="/images/professor_portrait.png"
-                alt={professorData.name}
-                fill
-                priority
-                className="object-cover object-top hover:scale-105 transition-transform duration-500"
-              />
-            </div>
+            <ThreeDTiltCard maxTilt={12} className="w-full flex">
+              <div className="relative w-full rounded-3xl overflow-hidden bg-slate-200 border border-slate-200/80 shadow-xl aspect-[4/5] min-h-[380px]">
+                <Image
+                  src="/images/professor_portrait.png"
+                  alt={professorData.name}
+                  fill
+                  priority
+                  className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </ThreeDTiltCard>
           </motion.div>
 
           {/* Right Column: Cards for Areas of Expertise & Core Values */}
