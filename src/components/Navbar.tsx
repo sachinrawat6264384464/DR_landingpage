@@ -21,6 +21,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Gallery Spotlight", href: "#media-gallery" },
     { name: "Research", href: "#research" },
     { name: "Lab & Grants", href: "#lab-grants" },
     { name: "Publications", href: "#publications" },
@@ -65,7 +66,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Framer Motion Nav Links */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             {navLinks.map((link) => (
               <motion.a
                 key={link.name}
@@ -74,7 +75,7 @@ export default function Navbar() {
                 onMouseLeave={() => setHoveredLink(null)}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-academic-navy transition-colors rounded-xl"
+                className="relative px-3 py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-academic-navy transition-colors rounded-xl"
               >
                 <span className="relative z-10">{link.name}</span>
 

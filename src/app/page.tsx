@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import MediaGallerySection from "@/components/MediaGallerySection";
 import ResearchSection from "@/components/ResearchSection";
-import InteractiveDemoWidget from "@/components/InteractiveDemoWidget";
 import LabGrantsSection from "@/components/LabGrantsSection";
 import PublicationsSection from "@/components/PublicationsSection";
 import TeachingSection from "@/components/TeachingSection";
@@ -23,12 +23,11 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       
-      {/* Research & Interactive AI/Quantum Simulator */}
-      <ResearchSection />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <InteractiveDemoWidget />
-      </div>
+      {/* Upper Media Gallery & Keynote Video Spotlight */}
+      <MediaGallerySection />
 
+      {/* Research & Lab Showcase */}
+      <ResearchSection />
       <LabGrantsSection />
       <PublicationsSection />
       
