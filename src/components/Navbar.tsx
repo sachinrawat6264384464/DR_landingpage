@@ -41,7 +41,7 @@ export default function Navbar() {
           : "bg-white/90 backdrop-blur-md py-5 sm:py-6 border-b border-slate-100"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between gap-4">
           
           {/* Logo / Professor Title */}
@@ -65,7 +65,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Framer Motion Nav Links */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
             {navLinks.map((link) => (
               <motion.a
                 key={link.name}
@@ -74,7 +74,7 @@ export default function Navbar() {
                 onMouseLeave={() => setHoveredLink(null)}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative px-3 py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-academic-navy transition-colors rounded-xl"
+                className="relative px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-academic-navy transition-colors rounded-xl"
               >
                 <span className="relative z-10">{link.name}</span>
 
