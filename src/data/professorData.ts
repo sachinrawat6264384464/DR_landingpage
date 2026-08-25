@@ -77,6 +77,40 @@ export interface Student {
   currentRole?: string;
 }
 
+export interface NewsPressItem {
+  id: string;
+  date: string;
+  publisher: string;
+  title: string;
+  summary: string;
+  category: 'Media Feature' | 'Keynote Talk' | 'Press Release' | 'Panel Discussion';
+  location?: string;
+  linkUrl: string;
+}
+
+export interface VideoLectureItem {
+  id: string;
+  title: string;
+  courseCode: string;
+  duration: string;
+  views: string;
+  rating: string;
+  topic: string;
+  youtubeId: string;
+  slidesUrl: string;
+}
+
+export interface AlumniTestimonialItem {
+  id: string;
+  name: string;
+  degreeYear: string;
+  currentRole: string;
+  organization: string;
+  location: string;
+  quote: string;
+  avatarInitials: string;
+}
+
 export const professorData = {
   name: "Dr. Arvind Sharma",
   title: "Professor of Computer Science",
@@ -543,6 +577,116 @@ export const professorData = {
       category: "Grant"
     }
   ] as Achievement[],
+
+  newsAndPress: [
+    {
+      id: "press-1",
+      date: "August 2024",
+      publisher: "MIT Technology Review",
+      title: "Scaling Edge AI Transformers Without Sacrificing Precision",
+      summary: "Feature article highlighting Dr. Sharma's research lab breakthroughs in dynamic attention pruning for low-power edge microprocessors.",
+      category: "Media Feature",
+      linkUrl: "https://technologyreview.com"
+    },
+    {
+      id: "press-2",
+      date: "July 2024",
+      publisher: "IJCAI 2024 Tokyo, Japan",
+      title: "Invited Keynote: Next-Generation Quantum Machine Learning Primitives",
+      summary: "Delivered opening plenary lecture on hybrid quantum-classical optimization algorithms to 2,500+ global AI delegates.",
+      category: "Keynote Talk",
+      location: "Tokyo, Japan",
+      linkUrl: "https://ijcai.org"
+    },
+    {
+      id: "press-3",
+      date: "February 2024",
+      publisher: "Times Higher Education",
+      title: "Pioneering Quantum Computing Education in Asian Universities",
+      summary: "Interview discussing curriculum innovation and establishing state-of-the-art quantum computing hardware labs for undergraduate students.",
+      category: "Media Feature",
+      linkUrl: "https://timeshighereducation.com"
+    },
+    {
+      id: "press-4",
+      date: "November 2023",
+      publisher: "Stanford Quantum AI Summit",
+      title: "Panel Chair: Post-Quantum Cryptographic Safety in Distributed Systems",
+      summary: "Chaired expert academic panel on zero-trust state estimation and lattice-based cryptography standards.",
+      category: "Panel Discussion",
+      location: "Palo Alto, CA, USA",
+      linkUrl: "https://stanford.edu"
+    }
+  ] as NewsPressItem[],
+
+  videoLectures: [
+    {
+      id: "lec-1",
+      title: "Lecture 01: Attention Mechanisms & Transformer Architectures",
+      courseCode: "CS-501 Advanced Deep Learning",
+      duration: "52 mins",
+      views: "18.4K Views",
+      rating: "⭐ 4.9/5.0",
+      topic: "Self-Attention Math, Positional Encodings & Multi-Head Scaling",
+      youtubeId: "dQw4w9WgXcQ",
+      slidesUrl: "#"
+    },
+    {
+      id: "lec-2",
+      title: "Lecture 04: Qubits, Superposition & Quantum Circuit Design",
+      courseCode: "CS-704 Quantum Computing",
+      duration: "48 mins",
+      views: "12.1K Views",
+      rating: "⭐ 5.0/5.0",
+      topic: "Bloch Sphere Representation, Hadamard Gates & Entanglement",
+      youtubeId: "dQw4w9WgXcQ",
+      slidesUrl: "#"
+    },
+    {
+      id: "lec-3",
+      title: "Lecture 08: Interpretability via SHAP, LIME & Integrated Gradients",
+      courseCode: "CS-412 Trustworthy AI",
+      duration: "60 mins",
+      views: "24.6K Views",
+      rating: "⭐ 4.9/5.0",
+      topic: "Shapley Values in Game Theory & Model Attribution Bounds",
+      youtubeId: "dQw4w9WgXcQ",
+      slidesUrl: "#"
+    }
+  ] as VideoLectureItem[],
+
+  alumniTestimonials: [
+    {
+      id: "alumni-1",
+      name: "Dr. Vikramaditya Rao",
+      degreeYear: "Ph.D. Graduate (2024)",
+      currentRole: "Senior AI Scientist",
+      organization: "Google DeepMind",
+      location: "London, UK",
+      quote: "Dr. Sharma's mentorship during my doctoral research was transformative. His relentless insistence on mathematical rigor combined with high-impact applications gave me the confidence to publish in top-tier journals and lead AI research at DeepMind.",
+      avatarInitials: "VR"
+    },
+    {
+      id: "alumni-2",
+      name: "Dr. Kavita Singhania",
+      degreeYear: "Ph.D. Graduate (2023)",
+      currentRole: "Assistant Professor",
+      organization: "Indian Institute of Technology (IIT), Bombay",
+      location: "Mumbai, India",
+      quote: "Professor Sharma is not just a world-class researcher; he is a master educator. Learning how to structure complex theoretical proofs and guide young researchers under his supervision laid the foundation for my academic career as a faculty member.",
+      avatarInitials: "KS"
+    },
+    {
+      id: "alumni-3",
+      name: "Siddharth Sen",
+      degreeYear: "M.Tech Alumni (2023)",
+      currentRole: "Security Engineer & Researcher",
+      organization: "Microsoft Research",
+      location: "Redmond, WA, USA",
+      quote: "The hands-on experience I gained in the AI-QIS Lab working on zero-knowledge smart grid protocols under Dr. Sharma was directly applicable to my research work at Microsoft. His guidance opens doors globally.",
+      avatarInitials: "SS"
+    }
+  ] as AlumniTestimonialItem[],
 
   students: [
     {

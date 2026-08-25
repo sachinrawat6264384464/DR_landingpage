@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { professorData } from "@/data/professorData";
-import { Award, Mail, Menu, X, BookOpen, GraduationCap } from "lucide-react";
+import { Mail, Menu, X, GraduationCap } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +23,7 @@ export default function Navbar() {
     { name: "Lab & Grants", href: "#lab-grants" },
     { name: "Publications", href: "#publications" },
     { name: "Teaching", href: "#teaching" },
+    { name: "News & Media", href: "#news" },
     { name: "Achievements", href: "#achievements" },
     { name: "Contact", href: "#contact" },
   ];
