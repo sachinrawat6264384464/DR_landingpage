@@ -53,7 +53,7 @@ export default function ThreeDTiltCard({
   };
 
   return (
-    <div className="perspective-1000">
+    <div className={`perspective-1000 w-full ${className}`}>
       <motion.div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -65,7 +65,7 @@ export default function ThreeDTiltCard({
         }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         style={{ transformStyle: "preserve-3d" }}
-        className={`relative transition-shadow duration-300 ${className}`}
+        className="relative transition-shadow duration-300 w-full h-full"
       >
         {children}
 
