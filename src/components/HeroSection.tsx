@@ -84,7 +84,7 @@ export default function HeroSection() {
                 {professorData.name}
               </h2>
               <p className="text-sm sm:text-base font-semibold text-[#1E3A8A]">
-                {professorData.title}, {professorData.department}
+                {professorData.title}
               </p>
               <p className="text-xs sm:text-sm text-slate-500 font-medium">
                 {professorData.institution}
@@ -100,7 +100,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 bg-[#0F2942] hover:bg-[#1E3A8A] text-white text-sm font-semibold px-6 py-3.5 rounded-lg shadow-md transition-all hover:shadow-lg"
               >
                 <BookOpen className="w-4 h-4 text-academic-gold" />
-                <span>View Publications</span>
+                <span>View Publications (50+)</span>
                 <ArrowRight className="w-4 h-4 text-academic-gold" />
               </motion.a>
 
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border-2 border-[#0F2942] text-[#0F2942] text-sm font-semibold px-6 py-3.5 rounded-lg shadow-sm transition-all"
               >
                 <User className="w-4 h-4 text-[#0F2942]" />
-                <span>Know More About Me</span>
+                <span>Executive Profile</span>
               </motion.a>
             </motion.div>
           </motion.div>
@@ -145,8 +145,8 @@ export default function HeroSection() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-academic-navy">Top 2% Stanford Scientist</div>
-                    <div className="text-[11px] text-slate-500 font-medium">Artificial Intelligence & Quantum Computing</div>
+                    <div className="text-xs font-bold text-academic-navy">Medical Director & Vice Dean</div>
+                    <div className="text-[11px] text-slate-500 font-medium">50+ Publications • 3rd Rank MCI Election</div>
                   </div>
                 </motion.div>
               </div>

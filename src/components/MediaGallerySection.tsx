@@ -29,26 +29,26 @@ export default function MediaGallerySection() {
     {
       id: "lab",
       src: "/images/lab_computing_cluster.png",
-      title: "AI-QIS Compute Cluster Laboratory",
-      category: "Research Infrastructure",
-      location: "GIT Tech City Campus",
-      caption: "Dr. Arvind Sharma inspecting the 8x NVIDIA H100 Tensor Core server rig with PhD researchers and lab engineers.",
+      title: "Automated Immunohistochemistry Suite",
+      category: "Hospital Diagnostic Infrastructure",
+      location: "Index Hospital & Medical College",
+      caption: "Dr. Pawan Bhambhani inspecting modern automated tissue processing and digital histopathology rigs.",
     },
     {
       id: "keynote",
       src: "/images/keynote_speech.png",
-      title: "IJCAI Plenary Keynote Presentation",
-      category: "Keynote Lecture",
-      location: "Tokyo, Japan",
-      caption: "Delivering opening plenary keynote on hybrid quantum neural architectures to over 2,500 global delegates.",
+      title: "MP State IAPM Keynote Address",
+      category: "Plenary Medical Keynote",
+      location: "Indore, Madhya Pradesh",
+      caption: "Delivering state keynote address on diagnostic pathology standards, FNAC correlation, and PG mentorship.",
     },
     {
       id: "graduation",
       src: "/images/phd_graduation.png",
-      title: "Doctoral Scholars Convocation & Mentorship",
-      category: "Academic Convocation",
-      location: "University Grand Hall",
-      caption: "Celebrating Ph.D. graduation with advisees now taking up senior research roles at Google DeepMind and MIT CSAIL.",
+      title: "Postgraduate MD Pathology Convocation",
+      category: "Medical Academic Convocation",
+      location: "Index Medical College Auditorium",
+      caption: "Celebrating PG MD Pathology graduation with resident doctor advisees taking up consultant pathology roles.",
     },
   ];
 
@@ -66,13 +66,13 @@ export default function MediaGallerySection() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-academic-blue text-xs font-semibold uppercase tracking-wider border border-blue-200">
             <Camera className="w-3.5 h-3.5 text-academic-blue" />
-            Media & Academic Gallery Spotlight
+            Media & Medical Leadership Spotlight
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
-            Featured Research Video & Photo Gallery
+            Featured Medical Keynote Video & Clinical Gallery
           </h2>
           <p className="text-slate-600 text-base">
-            Moments from global keynote addresses, high-performance compute labs, and doctoral advising ceremonies.
+            Highlights from Medical Director keynotes, hospital equipment inaugurations, and Vice Dean academic ceremonies.
           </p>
         </motion.div>
 
@@ -93,12 +93,12 @@ export default function MediaGallerySection() {
                   <div className="flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase bg-red-50 text-red-700 border border-red-200 px-3 py-1 rounded-full">
                       <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-                      Keynote Video Spotlight
+                      Medical Keynote Spotlight
                     </span>
 
                     <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                      July 2024
+                      Annual Conference
                     </span>
                   </div>
 
@@ -106,7 +106,7 @@ export default function MediaGallerySection() {
                   <div className="relative aspect-video rounded-2xl bg-slate-950 overflow-hidden border border-slate-800 shadow-xl group">
                     <Image
                       src="/images/keynote_speech.png"
-                      alt="IJCAI Keynote Speech Video Poster"
+                      alt="Dr. Pawan Bhambhani Keynote Speech Video Poster"
                       fill
                       className={`object-cover object-center transition-transform duration-700 group-hover:scale-105 ${
                         isVideoPlaying ? "opacity-30 blur-sm" : "opacity-90"
@@ -126,18 +126,18 @@ export default function MediaGallerySection() {
                       </motion.button>
                       
                       <span className="text-xs font-bold text-white bg-black/60 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/20">
-                        {isVideoPlaying ? "Click to Pause" : "Click to Play Keynote (45 mins)"}
+                        {isVideoPlaying ? "Click to Pause" : "Click to Play Medical Keynote (45 mins)"}
                       </span>
                     </div>
 
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-slate-200 z-10">
                       <span className="bg-black/70 px-2.5 py-1 rounded-md border border-white/10 flex items-center gap-1">
                         <Video className="w-3.5 h-3.5 text-academic-gold" />
-                        IJCAI 2024 Tokyo Plenary
+                        IAPM State Plenary Speech
                       </span>
 
                       <span className="bg-blue-600/80 px-2.5 py-1 rounded-md font-bold text-white">
-                        28.4K Views
+                        18.5K Views
                       </span>
                     </div>
                   </div>
@@ -145,10 +145,10 @@ export default function MediaGallerySection() {
                   {/* Video Title & Details */}
                   <div className="space-y-2">
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-academic-navy leading-snug">
-                      Opening Plenary Address: "Quantum Machine Learning & Neural Primitives"
+                      Keynote Address: "Quality Excellence in Clinical Pathology & Medical Governance"
                     </h3>
                     <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                      Delivered live at IJCAI Tokyo Japan to an audience of over 2,500 computer scientists, exploring variational quantum circuits for deep transformer optimization.
+                      Delivered live by Dr. Pawan Bhambhani at the MP State Chapter IAPM conference, detailing histopathological correlations, equipment procurement standards, and postgraduate research mentorship.
                     </p>
                   </div>
                 </div>
@@ -156,14 +156,14 @@ export default function MediaGallerySection() {
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
                   <span className="flex items-center gap-1.5 text-academic-blue">
                     <MapPin className="w-3.5 h-3.5 text-academic-blue" />
-                    Tokyo International Forum, Japan
+                    State Medical Auditorium, Indore MP
                   </span>
 
                   <button
-                    onClick={() => alert("Opening full lecture recording and slides...")}
+                    onClick={() => alert("Opening full lecture recording and presentation slides...")}
                     className="text-academic-navy hover:text-academic-blue underline"
                   >
-                    View Full Presentation Slides (PDF)
+                    View Keynote Presentation (PDF)
                   </button>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function MediaGallerySection() {
             <div className="flex items-center justify-between mb-1">
               <h3 className="font-serif text-xl font-bold text-academic-navy flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-academic-blue" />
-                Campus & Laboratory Photo Showcase
+                Hospital & College Photo Showcase
               </h3>
               <span className="text-xs text-slate-500 font-semibold">
                 Click any photo to enlarge
@@ -229,18 +229,18 @@ export default function MediaGallerySection() {
             <div className="bg-academic-navy text-white p-4 sm:p-5 rounded-2xl shadow-md flex items-center justify-between gap-4">
               <div className="space-y-0.5">
                 <div className="text-xs font-bold text-academic-gold uppercase tracking-wider">
-                  Academic Media Archives
+                  Executive Dossier Archives
                 </div>
                 <div className="text-xs text-slate-300">
-                  High-res headshots, media dossier & keynote slides available for conference chairs.
+                  Curriculum vitae, research profile, and institutional credentials available for download.
                 </div>
               </div>
 
               <button
-                onClick={() => alert("Downloading Dr. Arvind Sharma's Media Kit & Press Pack (ZIP)...")}
+                onClick={() => alert("Downloading Dr. Pawan Bhambhani's Executive Profile Dossier (PDF)...")}
                 className="shrink-0 bg-academic-gold hover:bg-academic-gold-hover text-academic-navy text-xs font-bold px-3.5 py-2 rounded-xl shadow transition-transform hover:scale-105"
               >
-                Media Kit (ZIP)
+                Executive Dossier (PDF)
               </button>
             </div>
 
