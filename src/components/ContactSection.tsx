@@ -18,7 +18,7 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    purpose: "Academic Inquiry",
+    purpose: "Academic & Medical Inquiry",
     subject: "",
     message: "",
   });
@@ -31,7 +31,7 @@ export default function ContactSection() {
       setFormData({
         name: "",
         email: "",
-        purpose: "Academic Inquiry",
+        purpose: "Academic & Medical Inquiry",
         subject: "",
         message: "",
       });
@@ -51,13 +51,13 @@ export default function ContactSection() {
           className="text-center max-w-3xl mx-auto space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-academic-blue text-xs font-semibold uppercase tracking-wider">
-            Get In Touch
+            Executive Desk & Contact
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
-            Contact & Academic Office Details
+            Executive Desk & Medical Office Details
           </h2>
           <p className="text-slate-600 text-base">
-            For research collaborations, student inquiries, speaking engagements, or academic matters.
+            For medical administration matters, Vice Dean academic governance, PG Pathology guidance, or clinical inquiries.
           </p>
         </motion.div>
 
@@ -75,14 +75,14 @@ export default function ContactSection() {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
               
               <h3 className="font-serif text-2xl font-bold text-academic-gold">
-                Academic Office Coordinates
+                Executive Office Coordinates
               </h3>
 
               <div className="space-y-4 text-sm">
                 <div className="flex items-start gap-3">
                   <Building className="w-5 h-5 text-academic-gold shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-white">Department & College</div>
+                    <div className="font-semibold text-white">Department & Institutions</div>
                     <div className="text-slate-300 text-xs mt-0.5">
                       {professorData.department}
                     </div>
@@ -108,7 +108,7 @@ export default function ContactSection() {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-academic-gold shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-white">Direct Email</div>
+                    <div className="font-semibold text-white">Direct Executive Email</div>
                     <a
                       href={`mailto:${professorData.contactInfo.email}`}
                       className="text-academic-gold hover:underline text-xs"
@@ -121,7 +121,7 @@ export default function ContactSection() {
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-academic-gold shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-white">Department Office Phone</div>
+                    <div className="font-semibold text-white">Hospital & Office Phone</div>
                     <div className="text-slate-300 text-xs">
                       {professorData.contactInfo.phone}
                     </div>
@@ -131,7 +131,7 @@ export default function ContactSection() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-academic-gold shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-white">Advising & Office Hours</div>
+                    <div className="font-semibold text-white">Executive & Advising Hours</div>
                     <div className="text-slate-300 text-xs mt-0.5">
                       {professorData.contactInfo.officeHours}
                     </div>
@@ -150,7 +150,7 @@ export default function ContactSection() {
             className="lg:col-span-7 bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-md"
           >
             <h3 className="font-serif text-2xl font-bold text-academic-navy mb-6">
-              Send an Academic Inquiry
+              Send an Executive or Academic Message
             </h3>
 
             {submitted ? (
@@ -160,7 +160,7 @@ export default function ContactSection() {
                   Message Sent Successfully!
                 </h4>
                 <p className="text-xs text-emerald-700">
-                  Thank you for reaching out. Professor Sharma's academic desk will respond to your inquiry promptly.
+                  Thank you for reaching out. Dr. Pawan Bhambhani's executive office desk will respond to your message promptly.
                 </p>
               </div>
             ) : (
@@ -173,7 +173,7 @@ export default function ContactSection() {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Dr. Jane Smith"
+                      placeholder="e.g. Dr. Ramesh Sharma"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -189,7 +189,7 @@ export default function ContactSection() {
                     <input
                       type="email"
                       required
-                      placeholder="jane.smith@university.edu"
+                      placeholder="ramesh@medicalcollege.edu"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -211,11 +211,12 @@ export default function ContactSection() {
                       }
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs font-medium text-slate-800 focus:outline-none focus:border-academic-blue focus:bg-white transition-all"
                     >
-                      <option>Research Collaboration</option>
-                      <option>PhD / Guidance Application</option>
-                      <option>Course / Student Query</option>
-                      <option>Keynote / Guest Lecture Invitation</option>
-                      <option>General Academic Inquiry</option>
+                      <option>Medical Administration Query</option>
+                      <option>Vice Dean Academic Governance</option>
+                      <option>MD Pathology PG Guidance</option>
+                      <option>Clinical Collaboration</option>
+                      <option>Keynote / Guest Lecture</option>
+                      <option>General Inquiry</option>
                     </select>
                   </div>
 
@@ -257,7 +258,7 @@ export default function ContactSection() {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-academic-navy hover:bg-academic-navy-light text-white text-xs font-bold px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-[1.01]"
                 >
                   <Send className="w-4 h-4 text-academic-gold" />
-                  <span>Send Academic Message</span>
+                  <span>Send Executive Message</span>
                 </button>
               </form>
             )}

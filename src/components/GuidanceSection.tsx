@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { professorData } from "@/data/professorData";
-import { Building } from "lucide-react";
+import { Building, Stethoscope } from "lucide-react";
 
 export default function GuidanceSection() {
   return (
@@ -19,13 +19,14 @@ export default function GuidanceSection() {
           className="text-center max-w-3xl mx-auto space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-academic-blue text-xs font-semibold uppercase tracking-wider">
-            Mentorship & Advisory
+            <Stethoscope className="w-3.5 h-3.5 text-academic-blue" />
+            Postgraduate (PG) Research Guidance
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
-            Students & Research Guidance
+            Postgraduate Scholars & Dissertation Guidance
           </h2>
           <p className="text-slate-600 text-base">
-            Inspiring and supervising Ph.D. candidates, Master's researchers, and capstone engineering teams.
+            Recognized PG Guide supervising MD Pathology postgraduate residents, medical research dissertations, and scientific publications.
           </p>
         </motion.div>
 
@@ -52,7 +53,7 @@ export default function GuidanceSection() {
                         : "bg-blue-100 text-blue-800"
                     }`}
                   >
-                    {student.degree} • {student.status}
+                    MD Pathology • {student.status}
                   </span>
                 </div>
 

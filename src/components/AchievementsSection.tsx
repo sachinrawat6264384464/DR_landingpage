@@ -33,13 +33,13 @@ export default function AchievementsSection() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold uppercase tracking-wider">
             <Trophy className="w-3.5 h-3.5 text-amber-600" />
-            Honors & Global Distinction
+            Medical Recognitions & Leadership Distinction
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
-            Awards, Grants & Fellowships
+            Honors, Elections & Medical Recognitions
           </h2>
           <p className="text-slate-600 text-base">
-            Recognizing excellence in teaching innovation, impactful research discoveries, and professional leadership.
+            Recognizing Medical Council election rank, state and national IAPM leadership, postgraduate mentorship, and clinical publications.
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ export default function AchievementsSection() {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="font-serif text-2xl font-bold text-academic-gold">
+                  <span className="font-serif text-xl font-bold text-academic-gold">
                     {item.year}
                   </span>
                   <span
@@ -83,7 +83,7 @@ export default function AchievementsSection() {
 
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-bold text-amber-700">
                 <Sparkles className="w-4 h-4 text-amber-500" />
-                Academic Honor
+                Medical Honor & Distinction
               </div>
             </motion.div>
           ))}

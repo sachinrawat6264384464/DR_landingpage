@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { professorData, Grant } from "@/data/professorData";
+import { professorData } from "@/data/professorData";
 import {
   FlaskConical,
   Cpu,
@@ -53,7 +53,7 @@ export default function LabGrantsSection() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-academic-blue text-xs font-semibold uppercase tracking-wider border border-blue-200">
             <FlaskConical className="w-3.5 h-3.5 text-academic-blue" />
-            Research Lab & Infrastructure
+            Diagnostic Facilities & Infrastructure
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
             {professorData.labInfo.name}
@@ -76,7 +76,7 @@ export default function LabGrantsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
             <div className="space-y-2">
               <span className="text-xs text-academic-gold font-bold uppercase tracking-wider">
-                Laboratory Leadership
+                Departmental Leadership
               </span>
               <h3 className="font-serif text-xl font-bold text-white">
                 {professorData.labInfo.director}
@@ -88,7 +88,7 @@ export default function LabGrantsSection() {
 
             <div className="space-y-2">
               <span className="text-xs text-academic-gold font-bold uppercase tracking-wider">
-                Research Staff & Scholars
+                Diagnostic Staff & PG Residents
               </span>
               <h3 className="font-serif text-xl font-bold text-white flex items-center gap-2">
                 <Users className="w-5 h-5 text-academic-gold" />
@@ -98,7 +98,7 @@ export default function LabGrantsSection() {
 
             <div className="space-y-2">
               <span className="text-xs text-academic-gold font-bold uppercase tracking-wider">
-                Cumulative Extramural Grants
+                Institutional Healthcare Infrastructure
               </span>
               <h3 className="font-serif text-2xl font-bold text-academic-gold flex items-center gap-2">
                 <Landmark className="w-6 h-6 text-academic-gold" />
@@ -117,7 +117,7 @@ export default function LabGrantsSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-2xl font-bold text-academic-navy"
           >
-            Laboratory Compute & Experimental Facilities
+            Diagnostic Pathology & Laboratory Facilities
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -163,10 +163,10 @@ export default function LabGrantsSection() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <h3 className="font-serif text-2xl font-bold text-academic-navy">
-                Sponsored Research Grants & Projects
+                Institutional Projects & Infrastructure Grants
               </h3>
               <p className="text-xs text-slate-500 mt-1">
-                Extramural funding from government DST/SERB agencies, defence organizations, and industry partners.
+                Institutional grants and funding for medical diagnostic suites, pathology research, and healthcare infrastructure.
               </p>
             </div>
 

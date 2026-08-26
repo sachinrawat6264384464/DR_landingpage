@@ -7,7 +7,6 @@ import {
   Quote,
   Building2,
   MapPin,
-  Sparkles,
   GraduationCap,
 } from "lucide-react";
 
@@ -26,13 +25,13 @@ export default function AlumniTestimonialsSection() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-academic-blue text-xs font-semibold uppercase tracking-wider border border-blue-200">
             <GraduationCap className="w-3.5 h-3.5 text-academic-blue" />
-            Alumni & Mentorship Endorsements
+            Alumni & PG Mentorship Endorsements
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
-            Reflections from Former PhD Scholars
+            Reflections from Former MD Pathology PG Scholars
           </h2>
           <p className="text-slate-600 text-base">
-            Testimonials from past doctoral advisees now leading research at Google DeepMind, MIT CSAIL, and top universities.
+            Testimonials from postgraduate advisees and resident doctors now serving as consultant pathologists and faculty members across leading healthcare institutions.
           </p>
         </motion.div>
 

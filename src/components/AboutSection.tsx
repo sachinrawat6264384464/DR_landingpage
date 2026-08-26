@@ -53,16 +53,16 @@ export default function AboutSection() {
               {/* Category Label with Blue Underline Accent */}
               <div className="space-y-1">
                 <span className="text-xs font-bold text-academic-blue tracking-wider uppercase">
-                  ABOUT ME
+                  EXECUTIVE PROFILE
                 </span>
                 <div className="w-8 h-[2px] bg-academic-blue" />
               </div>
 
               {/* Main Headline */}
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F2942] leading-[1.15]">
-                Passionate <span className="text-[#1E3A8A] font-serif">Educator.</span>
+                Senior Medical <span className="text-[#1E3A8A] font-serif">Administrator.</span>
                 <br />
-                Dedicated <span className="text-[#1E3A8A] font-serif">Researcher.</span>
+                Academic <span className="text-[#1E3A8A] font-serif">Leader.</span>
               </h2>
 
               {/* Bio Paragraphs */}
@@ -155,7 +155,7 @@ export default function AboutSection() {
                   <Heart className="w-4 h-4" />
                 </div>
                 <h3 className="font-bold text-sm text-[#0F2942]">
-                  Core Values
+                  Core Leadership Values
                 </h3>
               </div>
 
@@ -215,7 +215,7 @@ export default function AboutSection() {
           {/* Education Left Timeline */}
           <div className="space-y-6">
             <h3 className="font-serif text-2xl font-bold text-[#0F2942]">
-              Education
+              Academic Qualifications
             </h3>
 
             <div className="relative border-l-2 border-[#1E3A8A] ml-2 pl-6 space-y-6">
@@ -245,7 +245,7 @@ export default function AboutSection() {
           {/* Experience Right Timeline */}
           <div className="space-y-6">
             <h3 className="font-serif text-2xl font-bold text-[#0F2942]">
-              Experience
+              Current Appointments
             </h3>
 
             <div className="relative border-l-2 border-[#1E3A8A] ml-2 pl-6 space-y-6">

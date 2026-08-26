@@ -25,13 +25,13 @@ export default function TeachingSection() {
           className="text-center max-w-3xl mx-auto space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-academic-blue text-xs font-semibold uppercase tracking-wider">
-            Pedagogy & Curriculum
+            Medical Pedagogy & Education
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-academic-navy">
-            Teaching & Student Advising
+            Medical Teaching & PG Student Advising
           </h2>
           <p className="text-slate-600 text-base">
-            Fostering rigorous analytical thinking, algorithmic mastery, and hands-on scientific problem solving.
+            Fostering diagnostic precision, clinical pathology skills, and postgraduate medical research guidance.
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ export default function TeachingSection() {
           >
             <h3 className="font-serif text-2xl font-bold text-academic-navy flex items-center gap-2">
               <BookOpen className="w-6 h-6 text-academic-blue" />
-              Current & Past Courses Taught
+              Medical & Postgraduate Courses Taught
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,7 +91,7 @@ export default function TeachingSection() {
                     <span>{course.semester}</span>
                     <span className="flex items-center gap-1">
                       <Users className="w-3.5 h-3.5 text-academic-blue" />
-                      {course.students} Enrolled
+                      {course.students} Medical Trainees
                     </span>
                   </div>
                 </motion.div>
@@ -111,7 +111,7 @@ export default function TeachingSection() {
             <div className="bg-academic-navy text-white p-6 sm:p-7 rounded-2xl shadow-xl relative overflow-hidden">
               <div className="flex items-center gap-2 text-academic-gold text-xs font-bold uppercase tracking-wider mb-3">
                 <Sparkles className="w-4 h-4" />
-                Teaching Philosophy
+                Educational & Leadership Philosophy
               </div>
 
               <blockquote className="font-serif italic text-sm text-slate-200 leading-relaxed">
@@ -119,7 +119,7 @@ export default function TeachingSection() {
               </blockquote>
 
               <div className="mt-4 pt-4 border-t border-white/10 text-xs font-medium text-slate-400">
-                — Dr. Arvind Sharma
+                — Dr. Pawan Bhambhani
               </div>
             </div>
 
@@ -127,12 +127,12 @@ export default function TeachingSection() {
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
               <h4 className="font-serif text-lg font-bold text-academic-navy flex items-center gap-2">
                 <Clock className="w-5 h-5 text-academic-blue" />
-                Student Office Hours
+                Vice Dean & Medical Director Hours
               </h4>
 
               <div className="space-y-3 text-xs">
                 <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="font-bold text-slate-800">Regular Advising Hours</div>
+                  <div className="font-bold text-slate-800">Academic & Administrative Hours</div>
                   <div className="text-slate-600 font-medium mt-0.5">
                     {professorData.contactInfo.officeHours}
                   </div>
@@ -150,7 +150,7 @@ export default function TeachingSection() {
               </div>
 
               <p className="text-[11px] text-slate-500 italic">
-                * Students seeking thesis guidance or course assistance are encouraged to send an email inquiry in advance.
+                * Faculty, PG residents, and medical students seeking academic or administrative guidance may schedule via email.
               </p>
             </div>
           </motion.div>

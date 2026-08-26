@@ -2,7 +2,7 @@
 
 import React from "react";
 import { professorData } from "@/data/professorData";
-import { GraduationCap, ArrowUp, BookOpen, ExternalLink } from "lucide-react";
+import { GraduationCap, ArrowUp, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -32,11 +32,11 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-slate-300 leading-relaxed max-w-md">
-              {professorData.institution} — Dedicated to groundbreaking AI research, quantum algorithms, and inspiring student mentorship.
+              {professorData.institution} — Dedicated to clinical pathology diagnostics, medical college academic governance, and healthcare infrastructure.
             </p>
 
             <div className="text-xs text-slate-400">
-              Department of Computer Science & Engineering
+              {professorData.department} • Index Hospital & Medical College
             </div>
           </div>
 
@@ -53,27 +53,27 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#about" className="hover:text-academic-gold transition-colors">
-                  About Professor
+                  Executive Profile
                 </a>
               </li>
               <li>
                 <a href="#research" className="hover:text-academic-gold transition-colors">
-                  Research Initiatives
+                  Clinical & Academic Leadership
                 </a>
               </li>
               <li>
                 <a href="#publications" className="hover:text-academic-gold transition-colors">
-                  Publications Library
+                  Publications (50+)
                 </a>
               </li>
               <li>
                 <a href="#teaching" className="hover:text-academic-gold transition-colors">
-                  Teaching & Courses
+                  Medical Teaching & Courses
                 </a>
               </li>
               <li>
                 <a href="#achievements" className="hover:text-academic-gold transition-colors">
-                  Honors & Achievements
+                  Honors & MCI Recognitions
                 </a>
               </li>
             </ul>
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* Col 3 - Academic Profiles */}
           <div className="md:col-span-4 space-y-3">
             <h4 className="font-serif text-sm font-bold text-academic-gold uppercase tracking-wider">
-              Bibliometric Profiles
+              Medical & Research Profiles
             </h4>
             <div className="flex flex-wrap gap-2 pt-1">
               <a
@@ -109,7 +109,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg transition-colors border border-white/10"
               >
-                <span>IEEE Xplore</span>
+                <span>PubMed</span>
                 <ExternalLink className="w-3 h-3 text-academic-gold" />
               </a>
               <a
@@ -129,7 +129,7 @@ export default function Footer() {
         {/* Bottom copyright & Scroll to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © {new Date().getFullYear()} {professorData.name}. All rights reserved. | Global Institute of Technology
+            © {new Date().getFullYear()} {professorData.name}. All rights reserved. | Index Medical College, Hospital & Research Centre
           </div>
 
           <button
